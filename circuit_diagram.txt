@@ -1,0 +1,49 @@
+# Smart Waste Bin Monitoring System - Circuit Diagram
+
+```
++---------------------+
+|                     |
+|     ESP8266         |
+|     NodeMCU         |
+|                     |
++--+--+--+--+--+--+---+
+   |  |  |  |  |  |
+   |  |  |  |  |  +----- D5 (GPIO14) ---- 220Ω Resistor ---- YELLOW LED ---- GND
+   |  |  |  |  |
+   |  |  |  |  +-------- D6 (GPIO12) ---- 220Ω Resistor ---- GREEN LED ----- GND
+   |  |  |  |
+   |  |  |  +----------- D4 (GPIO2) ----- ECHO (Ultrasonic Sensor)
+   |  |  |
+   |  |  +-------------- D3 (GPIO0) ----- TRIG (Ultrasonic Sensor)
+   |  |
+   |  +----------------- D2 (GPIO4) ----- SDA (LCD I2C)
+   |
+   +-------------------- D1 (GPIO5) ----- SCL (LCD I2C)
+
+
++---------------------+     +---------------------+     +---------------------+
+|                     |     |                     |     |                     |
+|  Ultrasonic Sensor  |     |   LCD Display I2C   |     |       LEDs         |
+|     (HC-SR04)       |     |      (20x4)         |     |                     |
+|                     |     |                     |     |                     |
++--+--+--+--+---------+     +--+--+--+--+---------+     +--+--+--+--+---------+
+   |  |  |  |               |  |  |  |                  |  |  |  |
+   |  |  |  |               |  |  |  |                  |  |  |  |
+  VCC GND TRIG ECHO        VCC GND SDA SCL             GND     GND
+   |  |   |   |             |  |   |   |               |       |
+   |  |   |   |             |  |   |   |               |       |
+   |  +---+---+-------------+--+   |   |               |       |
+   |      |                        |   |               |       |
+   +------+------------------------+---+---------------+-------+
+          |                            |
+          |                            |
+          +----------------------------+
+
+```
+
+Notes:
+1. Connect all GND pins to a common ground
+2. Connect all VCC pins to 5V power supply
+3. Use 220-330 ohm resistors for the LEDs
+4. The I2C LCD display address is set to 0x27 (default)
+5. Make sure to connect the ultrasonic sensor TRIG to D3 and ECHO to D4

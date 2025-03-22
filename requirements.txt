@@ -1,0 +1,14 @@
+# Arduino Libraries
+ESP8266WiFi
+Wire
+LiquidCrystal_I2C
+Ultrasonic
+
+# Additional Dependencies
+# These are typically installed with the ESP8266 board package
+ESP8266
+ESP8266WebServer
+
+# Note: Arduino libraries are typically installed through the Arduino IDE Library Manager
+# or by downloading the library ZIP files and installing them manually.
+# This requirements.txt file is for documentation purposes.
