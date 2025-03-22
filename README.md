@@ -1,4 +1,4 @@
-# Smart Waste Bin Monitoring System
+# Smart Waste Bin Management System
 
 ## Overview
 This project implements a smart waste bin monitoring system using an ESP8266 microcontroller. The system uses an ultrasonic sensor to detect the fill level of a waste bin and provides visual feedback through LEDs and an LCD display. When the bin is nearly full, it displays a flashing alert message and changes the LED indicator from green to yellow.
