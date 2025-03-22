@@ -52,7 +52,7 @@ Install these libraries through the Arduino IDE Library Manager or manually from
 2. Create a new channel with at least one field (for distance measurements)
 3. Note your channel API key and replace it in the code:
    ```cpp
-   String apiKey = "AK2OCVFBF6W1JU8I"; // Replace with your ThingSpeak API key
+   String apiKey = "ThingSpeak API key"; // Replace with your ThingSpeak API key
    ```
 
 ### Wi-Fi Configuration
